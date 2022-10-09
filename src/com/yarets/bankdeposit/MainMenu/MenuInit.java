@@ -5,7 +5,7 @@ import java.util.Map;
 import java.util.Set;
 
 public class MenuInit {
-    private Map<String, MainMenuCommand> menuCommands;
+    private final Map<String, MainMenuCommand> menuCommands;
 
     public MenuInit() {
         menuCommands = new LinkedHashMap<>();
