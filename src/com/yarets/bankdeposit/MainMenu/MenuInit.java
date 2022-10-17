@@ -1,16 +1,19 @@
 package com.yarets.bankdeposit.MainMenu;
 
-import java.util.LinkedHashMap;
-import java.util.Map;
-import java.util.Set;
+import com.yarets.bankdeposit.Deposits.DefaultDeposit;
+
+import java.util.*;
 
 public class MenuInit {
     private final Map<String, MainMenuCommand> menuCommands;
+
+    protected List<DefaultDeposit> actualDeposit = new ArrayList<>();
 
     public MenuInit() {
         menuCommands = new LinkedHashMap<>();
         menuCommands.put("Choose", new ChooseOption());
         menuCommands.put("Add", new AddOption());
+        menuCommands.put("Print", new CurrentOption());
         menuCommands.put("Search", new SearchOption());
         menuCommands.put("Delete", new DeleteOption());
         menuCommands.put("Sort", new SortOption());
@@ -20,7 +23,7 @@ public class MenuInit {
     public void doCommand(String command) {
         MainMenuCommand menuCommand = menuCommands.get(command);
         if(menuCommand != null)
-            menuCommand.doCommand();
+            menuCommand.doCommand(actualDeposit);
         else
             System.out.println("Введена неправильна команда!");
     }
@@ -28,4 +31,6 @@ public class MenuInit {
     public Set<String> printCommand() {
         return menuCommands.keySet();
     }
+
+
 }
