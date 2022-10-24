@@ -43,16 +43,18 @@ public class ChooseOption implements MainMenuCommand {
     protected void setDeposit(DefaultDeposit curDeposit){
         Scanner sc = new Scanner(System.in);
         boolean goodData = false;
-        int tmpValue;
+        int tmpValue = 0;
+        int tmpMount = 0;
+        int tmpAmount = 0;
         do {
             System.out.println("Введіть кількість грошей, які плануєте покласти на депозит:");
-            tmpValue = sc.nextInt();
-        }while(curDeposit.getMinInvestMoney() > tmpValue);
-        curDeposit.setAmountMoney(tmpValue);
+            tmpAmount = sc.nextInt();
+        }while(curDeposit.getMinInvestMoney() > tmpAmount);
+        curDeposit.setAmountMoney(tmpAmount);
         while (!goodData){
             try{
                 System.out.println("Введіть кількість часу для депозиту(у місяцях):");
-                tmpValue = sc.nextInt();
+                tmpMount = sc.nextInt();
 
                 goodData = true;
             }
@@ -61,25 +63,111 @@ public class ChooseOption implements MainMenuCommand {
                 sc.next();
             }
         }
-        curDeposit.setTermOfDeposit(tmpValue);
+        curDeposit.setTermOfDeposit(tmpMount);
         goodData = false;
 
-        while (!goodData){
-            try{
-                System.out.println("Введіть чи плануєте ви вносити ще грощі щомісячно?(Так - 1, Ні - 0)");
+        while (!goodData) {
+            try {
+                System.out.println("Введіть чи плануєте ви забирати кошти до вказаного часу?(Так - 1, Ні - 0)");
                 tmpValue = sc.nextInt();
-                if(tmpValue == 1){
-                    System.out.println("Введіть кількість грошей, на які буде збільшуватись депозит:");
-                    tmpValue = sc.nextInt();
-                    curDeposit.setAmountMonthlyAdd(tmpValue);
+                if (tmpValue != 1 && tmpValue != 0)
+                    throw new IllegalArgumentException();
+                goodData = true;
+            } catch (InputMismatchException ex) {
+                System.out.println("Введена неправильна команда");
+                sc.next();
+                continue;
+            } catch (IllegalArgumentException ex) {
+                System.out.println("Введена неправильна команда");
+                continue;
+            }
+        }
+        goodData = false;
+        while(!goodData){
+            try {
+                if (tmpValue == 1) {
+                    System.out.println("Введіть, коли ви плануєте забрати гроші:(не більше) " + tmpMount);
+                    int tmpEarlyMounth = sc.nextInt();
+                    if (tmpMount < tmpEarlyMounth)
+                        throw new IllegalArgumentException();
+                    curDeposit.setEarlyTerm(tmpEarlyMounth);
                 }
                 goodData = true;
             }
             catch (InputMismatchException ex){
                 System.out.println("Введена неправильна команда");
                 sc.next();
+                continue;
+            }
+            catch (IllegalArgumentException ex){
+                System.out.println("Введена неправильна команда");
+                continue;
             }
         }
+
+        goodData = false;
+        while(!goodData){
+            try {
+                if (tmpValue == 1) {
+                    System.out.println("Введіть, скільки ви плануєте забрати:(не більше) " + tmpAmount);
+                    int tmpEarlyAmount = sc.nextInt();
+                    if (tmpEarlyAmount < 0 || tmpEarlyAmount > tmpAmount)
+                        throw new IllegalArgumentException();
+                    curDeposit.setEarlyAmount((double) tmpEarlyAmount);
+                }
+                goodData = true;
+            }
+            catch (InputMismatchException ex){
+                System.out.println("Введена неправильна команда");
+                sc.next();
+                continue;
+            }
+            catch (IllegalArgumentException ex){
+                System.out.println("Введена неправильна команда");
+                continue;
+            }
+        }
+        goodData = false;
+        while (!goodData) {
+            try {
+                System.out.println("Введіть чи плануєте ви щомісячну капіталізацію?(Так - 1, Ні - 0)");
+                tmpValue = sc.nextInt();
+                if (tmpValue != 1 && tmpValue != 0)
+                    throw new IllegalArgumentException();
+                curDeposit.setMonthlyCapitalization(tmpValue);
+                goodData = true;
+            } catch (InputMismatchException ex) {
+                System.out.println("Введена неправильна команда");
+                sc.next();
+                continue;
+            } catch (IllegalArgumentException ex) {
+                System.out.println("Введена неправильна команда");
+                continue;
+            }
+        }
+        goodData = false;
+        while (!goodData) {
+            try {
+                System.out.println("Введіть чи плануєте ви додавати гроші щомісячно?(Так - 1, Ні - 0)");
+                tmpValue = sc.nextInt();
+                if (tmpValue != 1 && tmpValue != 0)
+                    throw new IllegalArgumentException();
+                if (tmpValue == 1){
+                    System.out.println("Наскільки ви хочете поповняти депозит?");
+                    tmpValue = sc.nextInt();
+                    curDeposit.setAmountMonthlyAdd(tmpValue);
+                }
+                goodData = true;
+            } catch (InputMismatchException ex) {
+                System.out.println("Введена неправильна команда");
+                sc.next();
+                continue;
+            } catch (IllegalArgumentException ex) {
+                System.out.println("Введена неправильна команда");
+                continue;
+            }
+        }
+
         goodData = false;
         ListOfCurrency curCurrency = ListOfCurrency.UAH;
         while (!goodData){
@@ -103,24 +191,21 @@ public class ChooseOption implements MainMenuCommand {
 
     private void createSomeDeposit() {
         DefaultDeposit defDeposit = DefaultDeposit.builder()
-                .setDepositName("Молодіжний")
+                .setDepositName("ForYoungPeople")
                 .setCompanyName("Alfa-bank")
-                .setEarlyTerm(true)
                 .setPercentage(6.5)
                 .build();
         patternDeposit.add(defDeposit);
         defDeposit = DefaultDeposit.builder()
-                .setDepositName("Велика Банка")
+                .setDepositName("Big Bank")
                 .setCompanyName("PrivatBank")
-                .setEarlyTerm(true)
                 .setPercentage(14.0)
                 .setMinInvestMoney(10000)
                 .build();
         patternDeposit.add(defDeposit);
         defDeposit = DefaultDeposit.builder()
-                .setDepositName("Швидкі гроші")
+                .setDepositName("Fast Money")
                 .setCompanyName("Pumb")
-                .setEarlyTerm(true)
                 .setPercentage(9.0)
                 .setMinInvestMoney(10)
                 .build();
