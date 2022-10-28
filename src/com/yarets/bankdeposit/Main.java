@@ -1,6 +1,6 @@
 package com.yarets.bankdeposit;
 
-import com.yarets.bankdeposit.MainMenu.MenuInit;
+import com.yarets.bankdeposit.mainmenu.MenuInit;
 
 import java.util.Scanner;
 

@@ -1,13 +1,11 @@
-package com.yarets.bankdeposit.MainMenu;
+package com.yarets.bankdeposit.mainmenu;
 
 import com.yarets.bankdeposit.Deposits.DefaultDeposit;
-import com.yarets.bankdeposit.MainMenu.MainMenuCommand;
 import com.yarets.bankdeposit.comparator.AmountMoneyComparator;
 import com.yarets.bankdeposit.comparator.CompanyNameComparator;
 import com.yarets.bankdeposit.comparator.DepositNameComparator;
 import com.yarets.bankdeposit.comparator.PercentageComparator;
 
-import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;

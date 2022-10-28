@@ -1,5 +1,5 @@
 package com.yarets.bankdeposit;
 
-public enum ListOfCurrency {
+public enum CurrencyEnum {
     UAH, USD, EUR;
 }

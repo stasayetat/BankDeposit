@@ -1,4 +1,4 @@
-package com.yarets.bankdeposit.MainMenu;
+package com.yarets.bankdeposit.mainmenu;
 
 import com.yarets.bankdeposit.Deposits.DefaultDeposit;
 

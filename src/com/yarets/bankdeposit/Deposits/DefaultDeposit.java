@@ -1,6 +1,6 @@
 package com.yarets.bankdeposit.Deposits;
 
-import com.yarets.bankdeposit.ListOfCurrency;
+import com.yarets.bankdeposit.CurrencyEnum;
 
 import java.util.*;
 
@@ -17,7 +17,7 @@ public class DefaultDeposit implements Comparable<DefaultDeposit>{
     private Integer amountMonthlyAdd = 0;
     private Integer monthlyCapitalization = 0;
     private Double mayEarnMoney;
-    private ListOfCurrency currency;
+    private CurrencyEnum currency;
     private Map<Integer, Double> earnMonthly = new LinkedHashMap<>();
     public DefaultDeposit() {
 
@@ -67,7 +67,7 @@ public class DefaultDeposit implements Comparable<DefaultDeposit>{
         this.amountMonthlyAdd = amountMonthlyAdd;
     }
 
-    public void setCurrency(ListOfCurrency currency) {
+    public void setCurrency(CurrencyEnum currency) {
         this.currency = currency;
     }
 
@@ -132,7 +132,7 @@ public class DefaultDeposit implements Comparable<DefaultDeposit>{
         double sumEarn = 0;
         double tmpAmount = amountMoney;
         double earnMoney = 0;
-        if (currency != ListOfCurrency.UAH)
+        if (currency != CurrencyEnum.UAH)
             percentage /= 10;
 
         while(chMonth  <= termOfDeposit){
@@ -183,7 +183,7 @@ public class DefaultDeposit implements Comparable<DefaultDeposit>{
                 + termOfDeposit + ", капіталізація: " + capStr
                 + ", валюта: " + currency + ", можливо зароблені гроші: " + mayEarnMoney;
     }
-    private void printInvest(ListOfCurrency currency){
+    private void printInvest(CurrencyEnum currency){
         for(Map.Entry mp : earnMonthly.entrySet()){
             System.out.println("За " + mp.getKey() + " місяць зароблено " + mp.getValue() + currency);
         }

@@ -1,5 +1,6 @@
-package com.yarets.bankdeposit.MainMenu;
+package com.yarets.bankdeposit.mainmenu;
 
+import com.yarets.bankdeposit.DataInput;
 import com.yarets.bankdeposit.Deposits.DefaultDeposit;
 
 import java.util.InputMismatchException;
@@ -10,20 +11,9 @@ public class AddOption extends ChooseOption implements MainMenuCommand {
     }
     @Override
     public void doCommand(List<DefaultDeposit> listDeposit) {
-        Scanner sc = new Scanner(System.in);
-        boolean goodData = false;
-        double ownPer = 0;
-        while (!goodData){
-            try{
-                System.out.println("Виберіть відсоток для власного депозиту:");
-                ownPer = sc.nextDouble();
-                goodData = true;
-            }
-            catch (InputMismatchException ex){
-                System.out.println("Введена неправильна команда");
-                sc.next();
-            }
-        }
+        DataInput dpi = new DataInput();
+        System.out.println("Виберіть відсоток для власного депозиту:");
+        double ownPer = dpi.inputDouble();
 
         DefaultDeposit ownDeposit = DefaultDeposit.builder()
                 .setDepositName("User Deposit")
@@ -34,7 +24,4 @@ public class AddOption extends ChooseOption implements MainMenuCommand {
         listDeposit.add(ownDeposit);
         ownDeposit.calcInvest();
     }
-
-
-
 }
