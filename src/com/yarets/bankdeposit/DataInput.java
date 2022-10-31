@@ -148,5 +148,4 @@ public class DataInput {
         return retDouble;
     }
 
-
 }

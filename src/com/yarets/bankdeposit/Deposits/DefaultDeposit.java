@@ -130,31 +130,32 @@ public class DefaultDeposit implements Comparable<DefaultDeposit>{
     public void calcInvest() {
         int chMonth = 1;
         double sumEarn = 0;
-        double tmpAmount = amountMoney;
+        double tmpAmount = this.amountMoney;
         double earnMoney = 0;
-        if (currency != CurrencyEnum.UAH)
-            percentage /= 10;
+        double tmpPercent = this.percentage;
+        if (this.currency != CurrencyEnum.UAH)
+            tmpPercent /= 10;
 
-        while(chMonth  <= termOfDeposit){
-            if(chMonth == earlyTerm)
-                tmpAmount -= earlyAmount;
-            earnMoney = (((double)tmpAmount/100)*(percentage/365)*31);
-            earnMonthly.put(chMonth, earnMoney);
-            tmpAmount += amountMonthlyAdd;
-            if(monthlyCapitalization == 1)
+        while(chMonth  <= this.termOfDeposit){
+            if(chMonth == this.earlyTerm)
+                tmpAmount -= this.earlyAmount;
+            earnMoney = (((double)tmpAmount/100)*(tmpPercent/365)*31);
+            this.earnMonthly.put(chMonth, earnMoney);
+            tmpAmount += this.amountMonthlyAdd;
+            if(this.monthlyCapitalization == 1)
                 tmpAmount += earnMoney;
             sumEarn += earnMoney;
             chMonth++;
         }
-        tmpAmount -= amountMonthlyAdd;
-        if(monthlyCapitalization == 0)
+        tmpAmount -= this.amountMonthlyAdd;
+        if(this.monthlyCapitalization == 0)
             sumEarn += tmpAmount;
         else{
             sumEarn = tmpAmount;
         }
-        printInvest(currency);
+        printInvest(this.currency);
         System.out.println("Загалом зароблено " + sumEarn);
-        mayEarnMoney = sumEarn;
+        this.mayEarnMoney = sumEarn;
     }
 
     @Override

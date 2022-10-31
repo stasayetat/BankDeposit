@@ -18,6 +18,7 @@ public class MenuInit {
         menuCommands.put("Delete", new DeleteOption());
         menuCommands.put("Sort", new SortOption());
         menuCommands.put("Exit", new ExitCommand());
+        menuCommands.put("Calculate", new CalcOption());
     }
 
     public void doCommand(String command) {

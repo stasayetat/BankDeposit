@@ -18,24 +18,13 @@ public class ChooseOption implements MainMenuCommand {
     @Override
     public void doCommand(List<DefaultDeposit> listDeposit) {
         DefaultDeposit curDeposit = new DefaultDeposit();
-        boolean goodData = false;
+        DataInput dpi = new DataInput();
         System.out.println("Виберіть один з наявних депозитів: ");
         for(int i = 0; i < patternDeposit.size(); i++){
             System.out.println(i+1 + ":" + patternDeposit.get(i));
         }
-        Scanner sc = new Scanner(System.in);
-
-        while (!goodData){
-            try{
-                System.out.println("Введіть індекс обраного депозиту");
-                int indDep = sc.nextInt();
-                curDeposit = patternDeposit.get(indDep-1);
-                goodData = true;
-            }
-            catch(IndexOutOfBoundsException e){
-                System.out.println("Введена неправильна команда");
-            }
-        }
+        int indDep = dpi.inputMore(patternDeposit.size());
+        curDeposit = patternDeposit.get(indDep-1);
         setDeposit(curDeposit);
         listDeposit.add(curDeposit);
         curDeposit.calcInvest();
