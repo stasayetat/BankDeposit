@@ -8,7 +8,7 @@ import java.util.function.Supplier;
 import static java.lang.System.in;
 
 public class DataInput {
-    private static final Scanner sc = new Scanner(in);
+    //private Scanner sc = new Scanner(in);
 
     public int inputInt(){
         return inputInt(retInt -> retInt <= 0);
@@ -51,14 +51,17 @@ public class DataInput {
     }
 
     private double inputDouble(Predicate<Double> pared){
+        Scanner sc = new Scanner(System.in);
         return input(sc::nextDouble, pared);
     }
 
     private int inputInt(Predicate<Integer> pared){
+        Scanner sc = new Scanner(System.in);
         return input(sc::nextInt, pared);
     }
 
     private <T> T input(Supplier<T> supplier, Predicate<T> predicate){
+        Scanner sc = new Scanner(System.in);
         boolean goodData = false;
         T value = null;
         while(!goodData){

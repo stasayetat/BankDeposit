@@ -78,6 +78,10 @@ public class DefaultDeposit {
         this.monthlyCapitalization = monthlyCapitalization;
     }
 
+    public void setMayEarnMoney(Double mayEarnMoney) {
+        this.mayEarnMoney = mayEarnMoney;
+    }
+
     public static DepositBuilder builder() {
         return new DepositBuilder();
     }

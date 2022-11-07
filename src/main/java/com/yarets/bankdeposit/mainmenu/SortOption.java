@@ -20,11 +20,12 @@ public class SortOption extends SearchOption implements MainMenuCommand {
         List<String> sortList = createArr();
         System.out.println("Виберіть за яким параметром буде відбуватись сортування:");
         sortPattern = choosePattern(sortList);
+        sortDeposit(sortPattern, listDeposit);
+    }
+    private void sortDeposit(Integer sortPattern, List<DefaultDeposit> listDeposit){
         DataInput dpi = new DataInput();
         System.out.println("Виберіть за зростанням чи за спаданням(0 та 1 відповідно):");
-        ascDesc = dpi.inputOneZero();
-
-
+        int ascDesc = dpi.inputOneZero();
         switch (sortPattern) {
             case 1 -> {
                 listDeposit.sort(new CompanyNameComparator());

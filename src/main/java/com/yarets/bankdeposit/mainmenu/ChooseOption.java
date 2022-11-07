@@ -7,12 +7,12 @@ import com.yarets.bankdeposit.deposit.DefaultDeposit;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 public class ChooseOption implements MainMenuCommand {
     protected List<DefaultDeposit> patternDeposit = new ArrayList<>();
+    protected DataInput dpi = new DataInput();
     public ChooseOption() {
-        createSomeDeposit();
+        createSomeDeposit(patternDeposit);
     }
 
     @Override
@@ -32,47 +32,67 @@ public class ChooseOption implements MainMenuCommand {
 
     protected void setDeposit(DefaultDeposit curDeposit){
         DataInput dpi = new DataInput();
+        int maxMoney = chooseMoneyDeposit(curDeposit);
+        curDeposit.setAmountMoney(maxMoney);
+        int maxMonth = chooseTermDeposit();
+        curDeposit.setTermOfDeposit(maxMonth);
+        int[] earlyTerm = chooseEarlyTerm(maxMonth,maxMoney);
+        curDeposit.setEarlyTerm(earlyTerm[0]);
+        curDeposit.setMayEarnMoney((double) earlyTerm[1]);
+        curDeposit.setMonthlyCapitalization(chooseCap());
+        curDeposit.setAmountMonthlyAdd(chooseMonthlyAdd());
+        curDeposit.setCurrency(chooseCurrency());
+    }
 
-        Scanner sc = new Scanner(System.in);
+    protected int chooseMoneyDeposit(DefaultDeposit defaultDeposit){
         System.out.println("Введіть кількість грошей, які плануєте покласти на депозит:");
-        int tmpAmount = dpi.inputLess(curDeposit.getMinInvestMoney());
-        curDeposit.setAmountMoney(tmpAmount);
+        return dpi.inputLess(defaultDeposit.getMinInvestMoney());
+    }
 
+
+
+    protected int chooseTermDeposit(){
         System.out.println("Введіть кількість часу для депозиту(у місяцях):");
-        int tmpMount = dpi.inputInt();
-        curDeposit.setTermOfDeposit(tmpMount);
+        return dpi.inputInt();
+    }
 
+    protected int[] chooseEarlyTerm(int tmpMounth, int tmpAmount){
         System.out.println("Введіть чи плануєте ви забирати кошти до вказаного часу?(Так - 1, Ні - 0)");
         int tmpValue = dpi.inputOneZero();
+        int[] wishRes = new int[2];
+        wishRes[0] = 0;
+        wishRes[1] = 0;
         if(tmpValue == 1){
-            System.out.println("Введіть, коли ви плануєте забрати гроші:(не більше) " + tmpMount);
-            int tmpEarlyMounth = dpi.inputMore(tmpMount);
-            curDeposit.setEarlyTerm(tmpEarlyMounth);
+            System.out.println("Введіть, коли ви плануєте забрати гроші:(не більше) " + tmpMounth);
+            int tmpEarlyMounth = dpi.inputMore(tmpMounth);
+            wishRes[0] = tmpEarlyMounth;
             System.out.println("Введіть, скільки ви плануєте забрати:(не більше) " + tmpAmount);
             int tmpEarlyAmount  = dpi.inputMore(tmpAmount);
-            curDeposit.setEarlyAmount((double) tmpEarlyAmount);
+            wishRes[1] = tmpEarlyAmount;
         }
+            return wishRes;
+    }
 
+    protected int chooseCap(){
         System.out.println("Введіть чи плануєте ви щомісячну капіталізацію?(Так - 1, Ні - 0)");
-        tmpValue = dpi.inputOneZero();
-        curDeposit.setMonthlyCapitalization(tmpValue);
+        return dpi.inputOneZero();
+    }
 
+    protected int chooseMonthlyAdd(){
         System.out.println("Введіть чи плануєте ви додавати гроші щомісячно?(Так - 1, Ні - 0)");
-        tmpValue = dpi.inputOneZero();
+        int tmpValue = dpi.inputOneZero();
         if(tmpValue == 1){
             System.out.println("Введіть скільки ви плануєте додати:");
             tmpValue = dpi.inputInt();
-            curDeposit.setAmountMonthlyAdd(tmpValue);
         }
-
+        return tmpValue;
+    }
+    protected CurrencyEnum chooseCurrency(){
         System.out.println("Виберіть валюту для депозиту, якщо вибрано не UAH то відсоток у 10 раз менше:");
-        CurrencyEnum curCurrency = CurrencyEnum.UAH;
-
-        curCurrency = dpi.inputCurrency();
-        curDeposit.setCurrency(curCurrency);
+        return dpi.inputCurrency();
     }
 
-    private void createSomeDeposit() {
+    protected void createSomeDeposit(List<DefaultDeposit> patternDeposit) {
         DefaultDeposit defDeposit = DefaultDeposit.builder()
                 .setDepositName("ForYoungPeople")
                 .setCompanyName("Alfa-bank")

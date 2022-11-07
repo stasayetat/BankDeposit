@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="io.quarkus.junit5.mockito.config" type="repository">
+    <properties maven-id="io.quarkus:quarkus-junit5-mockito-config:2.13.3.Final" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/io/quarkus/quarkus-junit5-mockito-config/2.13.3.Final/quarkus-junit5-mockito-config-2.13.3.Final.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/mockito/mockito-core/4.8.0/mockito-core-4.8.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/net/bytebuddy/byte-buddy/1.12.14/byte-buddy-1.12.14.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/net/bytebuddy/byte-buddy-agent/1.12.14/byte-buddy-agent-1.12.14.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/objenesis/objenesis/3.2/objenesis-3.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

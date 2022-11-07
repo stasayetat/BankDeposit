@@ -1,0 +1,22 @@
+<component name="libraryTable">
+  <library name="expediagroup.molten.test.mockito.autoconfigure" type="repository">
+    <properties maven-id="com.expediagroup.molten:molten-test-mockito-autoconfigure:1.2.3" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/expediagroup/molten/molten-test-mockito-autoconfigure/1.2.3/molten-test-mockito-autoconfigure-1.2.3.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/mockito/mockito-core/3.12.4/mockito-core-3.12.4.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/net/bytebuddy/byte-buddy/1.11.13/byte-buddy-1.11.13.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/net/bytebuddy/byte-buddy-agent/1.11.13/byte-buddy-agent-1.11.13.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/objenesis/objenesis/3.2/objenesis-3.2.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/slf4j/slf4j-api/1.7.32/slf4j-api-1.7.32.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/slf4j/jcl-over-slf4j/1.7.32/jcl-over-slf4j-1.7.32.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/slf4j/jul-to-slf4j/1.7.32/jul-to-slf4j-1.7.32.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/slf4j/log4j-over-slf4j/1.7.32/log4j-over-slf4j-1.7.32.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/ch/qos/logback/logback-classic/1.2.5/logback-classic-1.2.5.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/ch/qos/logback/logback-core/1.2.5/logback-core-1.2.5.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/janino/janino/3.1.6/janino-3.1.6.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/janino/commons-compiler/3.1.6/commons-compiler-3.1.6.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
