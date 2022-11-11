@@ -8,9 +8,4 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class CurrencyEnumTest {
 
-    @Test
-    void testValueUAH() {
-        CurrencyEnum testCurrency = CurrencyEnum.UAH;
-        assertEquals(CurrencyEnum.UAH, testCurrency);
-    }
 }

@@ -4,6 +4,7 @@ import com.yarets.bankdeposit.CurrencyEnum;
 import com.yarets.bankdeposit.deposit.DefaultDeposit;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
+import org.powermock.reflect.Whitebox;
 
 import java.io.ByteArrayInputStream;
 import java.lang.reflect.Method;
@@ -13,9 +14,10 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class ChooseOptionTest {
     @Mock
-    MainMenuCommand mainMenuCommand = new ChooseOption();
-    @Mock
     DefaultDeposit defaultDeposit = new DefaultDeposit();
+    @Mock
+    MainMenuCommand mainMenuCommand = new ChooseOption();
+
     @Test
     void doCommand() {
     }
@@ -37,6 +39,7 @@ class ChooseOptionTest {
         }
     }
 
+
     @Test
     void chooseTermDeposit() {
         try{
@@ -52,6 +55,7 @@ class ChooseOptionTest {
 
     @Test
     void chooseCap() {
+        MainMenuCommand mainMenuCommand = new ChooseOption();
         try{
             Method method = ChooseOption.class.getDeclaredMethod("chooseCap", null);
             method.setAccessible(true);
@@ -66,6 +70,7 @@ class ChooseOptionTest {
 
     @Test
     void chooseCurrency() {
+        MainMenuCommand mainMenuCommand = new ChooseOption();
         try{
             Method method = ChooseOption.class.getDeclaredMethod("chooseCurrency", null);
             method.setAccessible(true);

@@ -1,7 +1,6 @@
 package com.yarets.bankdeposit.mainmenu;
 
 import com.yarets.bankdeposit.deposit.DefaultDeposit;
-import com.yarets.bankdeposit.mainmenu.*;
 
 
 import java.util.*;
@@ -15,12 +14,14 @@ public class MenuInit {
         menuCommands = new LinkedHashMap<>();
         menuCommands.put("Choose", new ChooseOption());
         menuCommands.put("Add", new AddOption());
-        menuCommands.put("Print", new CurrentOption());
+        menuCommands.put("Print", new PrintOption());
         menuCommands.put("Search", new SearchOption());
         menuCommands.put("Delete", new DeleteOption());
         menuCommands.put("Sort", new SortOption());
-        menuCommands.put("Exit", new ExitCommand());
+        menuCommands.put("WriteFile", new WriteFileOption());
+        menuCommands.put("ReadFile", new ReadFileOption());
         menuCommands.put("Calculate", new CalcOption());
+        menuCommands.put("Exit", new ExitCommand());
     }
 
     public void doCommand(String command) {

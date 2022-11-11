@@ -4,34 +4,37 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="61a8da65-ecbd-4743-8276-6baae923316d" name="Changes" comment="Add some tests">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_stefanbirkner_system_lambda_1_2_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_stefanbirkner_system_rules_1_19_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/expediagroup_molten_test_mockito_autoconfigure.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/io_quarkus_junit5_mockito_config.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/system_lambda_1_2_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/system_rules_1_19_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/yarets/bankdeposit/DataInputTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/yarets/bankdeposit/mainmenu/CalcOptionTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/yarets/bankdeposit/mainmenu/ExitCommandTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/yarets/bankdeposit/mainmenu/MenuInitTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/yarets/bankdeposit/mainmenu/SearchOptionTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/yarets/bankdeposit/mainmenu/SortOptionTest.java" afterDir="false" />
+    <list default="true" id="61a8da65-ecbd-4743-8276-6baae923316d" name="Changes" comment="Add WriteFileOption.java">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_27_0_GA.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_powermock_powermock_api_mockito_1_7_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_powermock_powermock_api_mockito_common_1_7_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_powermock_powermock_api_support_1_7_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_powermock_powermock_core_2_0_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_powermock_powermock_module_junit4_2_0_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_powermock_powermock_module_junit4_common_2_0_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_powermock_powermock_reflect_2_0_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/byte_buddy_1_10_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/powermock_api_mockito_1_7_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/powermock_module_junit4_2_0_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yarets/bankdeposit/mainmenu/ReadFileOption.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yarets/bankdeposit/mainmenu/WriteFileOption.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BankDeposit.iml" beforeDir="false" afterPath="$PROJECT_DIR$/BankDeposit.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yarets/bankdeposit/DataInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yarets/bankdeposit/DataInput.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yarets/bankdeposit/deposit/DefaultDeposit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yarets/bankdeposit/deposit/DefaultDeposit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yarets/bankdeposit/mainmenu/ChooseOption.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yarets/bankdeposit/mainmenu/ChooseOption.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yarets/bankdeposit/mainmenu/DeleteOption.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yarets/bankdeposit/mainmenu/DeleteOption.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yarets/bankdeposit/mainmenu/SearchOption.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yarets/bankdeposit/mainmenu/SearchOption.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yarets/bankdeposit/mainmenu/SortOption.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yarets/bankdeposit/mainmenu/SortOption.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/yarets/bankdeposit/mainmenu/AddOptionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/yarets/bankdeposit/mainmenu/AddOptionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yarets/bankdeposit/mainmenu/CurrentOption.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yarets/bankdeposit/mainmenu/PrintOption.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yarets/bankdeposit/mainmenu/MenuInit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yarets/bankdeposit/mainmenu/MenuInit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/yarets/bankdeposit/CurrencyEnumTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/yarets/bankdeposit/CurrencyEnumTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/yarets/bankdeposit/deposit/DefaultDepositTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/yarets/bankdeposit/deposit/DefaultDepositTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/yarets/bankdeposit/mainmenu/ChooseOptionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/yarets/bankdeposit/mainmenu/ChooseOptionTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/yarets/bankdeposit/mainmenu/CurrentOptionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/yarets/bankdeposit/mainmenu/CurrentOptionTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/yarets/bankdeposit/mainmenu/DeleteOptionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/yarets/bankdeposit/mainmenu/DeleteOptionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/yarets/bankdeposit/mainmenu/CurrentOptionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/yarets/bankdeposit/mainmenu/PrintOptionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/yarets/bankdeposit/mainmenu/ExitCommandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/yarets/bankdeposit/mainmenu/ExitCommandTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/yarets/bankdeposit/mainmenu/CurrentOption.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/yarets/bankdeposit/mainmenu/MenuInit.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/yarets/bankdeposit/mainmenu/MenuInit.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/yarets/bankdeposit/CurrencyEnumTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/yarets/bankdeposit/CurrencyEnumTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/yarets/bankdeposit/deposit/DefaultDepositTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/yarets/bankdeposit/deposit/DefaultDepositTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/yarets/bankdeposit/mainmenu/ChooseOptionTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/yarets/bankdeposit/mainmenu/ChooseOptionTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/yarets/bankdeposit/mainmenu/CurrentOptionTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/yarets/bankdeposit/mainmenu/ExitCommandTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/yarets/bankdeposit/mainmenu/ExitCommandTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,8 +47,8 @@
         <option value="Enum" />
         <option value="UML Use Case" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -91,16 +94,20 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "create.test.in.the.same.root": "true",
-    "last_opened_file_path": "C:/Users/stasy/IdeaProjects/system-rules-1.19.0.jar",
+    "last_directory_selection": "C:/Users/stasy/IdeaProjects/BankDeposit/src/main/java/com/yarets/bankdeposit",
+    "last_opened_file_path": "C:/Users/stasy/IdeaProjects/lr3pp",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.3402299",
+    "project.structure.side.proportion": "0.36666667",
     "settings.editor.selected.configurable": "reference.settings.ide.settings.notifications"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.yarets.bankdeposit" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="com.yarets.bankdeposit.mainmenu" />
@@ -110,7 +117,7 @@
       <recent name="com.yarets.bankdeposit.testdeposit" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in BankDeposit">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.yarets.bankdeposit.Main" />
       <module name="BankDeposit" />
@@ -135,7 +142,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ChooseOptionTest.chooseCap" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ChooseOptionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="BankDeposit" />
       <extension name="coverage">
         <pattern>
@@ -145,29 +152,43 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.yarets.bankdeposit.mainmenu" />
       <option name="MAIN_CLASS_NAME" value="com.yarets.bankdeposit.mainmenu.ChooseOptionTest" />
-      <option name="METHOD_NAME" value="chooseCap" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ChooseOptionTest.chooseMoneyDeposit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BankDeposit" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.yarets.bankdeposit.mainmenu.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.yarets.bankdeposit.mainmenu" />
+      <option name="MAIN_CLASS_NAME" value="com.yarets.bankdeposit.mainmenu.ChooseOptionTest" />
+      <option name="METHOD_NAME" value="chooseMoneyDeposit" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ChooseOptionTest.chooseCurrency" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DefaultDepositTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="BankDeposit" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.yarets.bankdeposit.mainmenu.*" />
+          <option name="PATTERN" value="com.yarets.bankdeposit.deposit.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.yarets.bankdeposit.mainmenu" />
-      <option name="MAIN_CLASS_NAME" value="com.yarets.bankdeposit.mainmenu.ChooseOptionTest" />
-      <option name="METHOD_NAME" value="chooseCurrency" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="com.yarets.bankdeposit.deposit" />
+      <option name="MAIN_CLASS_NAME" value="com.yarets.bankdeposit.deposit.DefaultDepositTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ChooseOptionTest.chooseEarlyTerm" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ExitCommandTest.testDoCommand" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="BankDeposit" />
       <extension name="coverage">
         <pattern>
@@ -176,24 +197,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.yarets.bankdeposit.mainmenu" />
-      <option name="MAIN_CLASS_NAME" value="com.yarets.bankdeposit.mainmenu.ChooseOptionTest" />
-      <option name="METHOD_NAME" value="chooseEarlyTerm" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ChooseOptionTest.chooseMonthlyAdd" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="BankDeposit" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.yarets.bankdeposit.mainmenu.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.yarets.bankdeposit.mainmenu" />
-      <option name="MAIN_CLASS_NAME" value="com.yarets.bankdeposit.mainmenu.ChooseOptionTest" />
-      <option name="METHOD_NAME" value="chooseMonthlyAdd" />
+      <option name="MAIN_CLASS_NAME" value="com.yarets.bankdeposit.mainmenu.ExitCommandTest" />
+      <option name="METHOD_NAME" value="testDoCommand" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -201,19 +206,19 @@
     </configuration>
     <list>
       <item itemvalue="Application.Main" />
-      <item itemvalue="JUnit.ChooseOptionTest.chooseCap" />
-      <item itemvalue="JUnit.ChooseOptionTest.chooseCurrency" />
-      <item itemvalue="JUnit.ChooseOptionTest.chooseEarlyTerm" />
-      <item itemvalue="JUnit.ChooseOptionTest.chooseMonthlyAdd" />
       <item itemvalue="JUnit.All in BankDeposit" />
+      <item itemvalue="JUnit.ChooseOptionTest" />
+      <item itemvalue="JUnit.ChooseOptionTest.chooseMoneyDeposit" />
+      <item itemvalue="JUnit.ExitCommandTest.testDoCommand" />
+      <item itemvalue="JUnit.DefaultDepositTest" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.All in BankDeposit" />
-        <item itemvalue="JUnit.ChooseOptionTest.chooseCurrency" />
-        <item itemvalue="JUnit.ChooseOptionTest.chooseMonthlyAdd" />
-        <item itemvalue="JUnit.ChooseOptionTest.chooseCap" />
-        <item itemvalue="JUnit.ChooseOptionTest.chooseEarlyTerm" />
+        <item itemvalue="JUnit.ExitCommandTest.testDoCommand" />
+        <item itemvalue="JUnit.ChooseOptionTest" />
+        <item itemvalue="JUnit.ChooseOptionTest.chooseMoneyDeposit" />
+        <item itemvalue="JUnit.DefaultDepositTest" />
       </list>
     </recent_temporary>
   </component>
@@ -324,7 +329,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667741385698</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Add all test that need">
+      <created>1667837716354</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1667837716354</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -405,7 +417,9 @@
     <MESSAGE value="Add input class" />
     <MESSAGE value="Add CalcOption.java" />
     <MESSAGE value="Add some tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add some tests" />
+    <MESSAGE value="Add all test that need" />
+    <MESSAGE value="Add WriteFileOption.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add WriteFileOption.java" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -418,6 +432,15 @@
           <properties class="java.util.NoSuchElementException" package="java.util" />
           <option name="timeStamp" value="158" />
         </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.reflect.InaccessibleObjectException" package="java.lang.reflect" />
+          <option name="timeStamp" value="165" />
+        </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/yarets/bankdeposit/DataInput.java</url>
+          <line>63</line>
+          <option name="timeStamp" value="162" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
@@ -435,14 +458,14 @@
     <SUITE FILE_PATH="coverage/BankDeposit$CalcOptionTest_testDoCommand.ic" NAME="CalcOptionTest.testDoCommand Coverage Results" MODIFIED="1667830627695" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.yarets.bankdeposit.mainmenu.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/BankDeposit$All_in_BankDeposit.ic" NAME="All in BankDeposit Coverage Results" MODIFIED="1667837520025" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/BankDeposit$All_in_BankDeposit.ic" NAME="All in BankDeposit Coverage Results" MODIFIED="1668173223837" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true" />
     <SUITE FILE_PATH="coverage/BankDeposit$SearchOptionTest.ic" NAME="SearchOptionTest Coverage Results" MODIFIED="1667824550151" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.yarets.bankdeposit.mainmenu.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/BankDeposit$CurrentOptionTest_testDoCommand.ic" NAME="CurrentOptionTest.testDoCommand Coverage Results" MODIFIED="1667831920232" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.yarets.bankdeposit.mainmenu.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/BankDeposit$DefaultDepositTest.ic" NAME="DefaultDepositTest Coverage Results" MODIFIED="1667738352504" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/BankDeposit$DefaultDepositTest.ic" NAME="DefaultDepositTest Coverage Results" MODIFIED="1668094526344" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.yarets.bankdeposit.deposit.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/BankDeposit$CurrencyEnumTest.ic" NAME="CurrencyEnumTest Coverage Results" MODIFIED="1667738706891" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

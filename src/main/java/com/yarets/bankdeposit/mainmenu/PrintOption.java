@@ -4,7 +4,7 @@ import com.yarets.bankdeposit.deposit.DefaultDeposit;
 
 import java.util.List;
 
-public class CurrentOption implements MainMenuCommand {
+public class PrintOption implements MainMenuCommand {
     @Override
     public void doCommand(List<DefaultDeposit> listDeposit) {
         System.out.println("Всі підключені депозити:");
