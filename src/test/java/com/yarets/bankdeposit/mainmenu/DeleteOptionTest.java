@@ -15,24 +15,24 @@ class DeleteOptionTest {
     private List<DefaultDeposit> testListDeposit = new ArrayList<>();
     @Mock
     MainMenuCommand mainMenuCommand = new DeleteOption();
-    @Test
-    void testDoCommand() {
-        DefaultDeposit defDeposit = DefaultDeposit.builder()
-                .setDepositName("ForYoungPeople")
-                .setCompanyName("Alfa-bank")
-                .setPercentage(6.5)
-                .build();
-        testListDeposit.add(defDeposit);
-        defDeposit = DefaultDeposit.builder()
-                .setDepositName("Big Bank")
-                .setCompanyName("PrivatBank")
-                .setPercentage(14.0)
-                .setMinInvestMoney(10000)
-                .build();
-        testListDeposit.add(defDeposit);
-        String data = "1";
-        System.setIn(new ByteArrayInputStream(data.getBytes()));
-        mainMenuCommand.doCommand(testListDeposit);
-        assertEquals("PrivatBank", testListDeposit.get(0).getCompanyName());
-    }
+//    @Test
+//    void testDoCommand() {
+//        DefaultDeposit defDeposit = DefaultDeposit.builder()
+//                .setDepositName("ForYoungPeople")
+//                .setCompanyName("Alfa-bank")
+//                .setPercentage(6.5)
+//                .build();
+//        testListDeposit.add(defDeposit);
+//        defDeposit = DefaultDeposit.builder()
+//                .setDepositName("Big Bank")
+//                .setCompanyName("PrivatBank")
+//                .setPercentage(14.0)
+//                .setMinInvestMoney(10000)
+//                .build();
+//        testListDeposit.add(defDeposit);
+//        String data = "1";
+//        System.setIn(new ByteArrayInputStream(data.getBytes()));
+//        mainMenuCommand.doCommand(testListDeposit);
+//        assertEquals("PrivatBank", testListDeposit.get(0).getCompanyName());
+//    }
 }

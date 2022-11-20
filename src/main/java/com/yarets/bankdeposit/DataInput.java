@@ -1,14 +1,31 @@
 package com.yarets.bankdeposit;
 
+
+
+import javax.mail.*;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeBodyPart;
+import javax.mail.internet.MimeMessage;
+import javax.mail.internet.MimeMultipart;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.InputMismatchException;
+import java.util.Properties;
 import java.util.Scanner;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
+import java.util.logging.Logger;
 
 import static java.lang.System.in;
 
 public class DataInput {
     //private Scanner sc = new Scanner(in);
+    private static final Scanner sc = new Scanner(System.in);
+    private final Logger logger = Logger.getLogger("MyLog");
+
+    public DataInput() {
+
+}
 
     public int inputInt(){
         return inputInt(retInt -> retInt <= 0);
@@ -31,6 +48,7 @@ public class DataInput {
     }
 
     public CurrencyEnum inputCurrency(){
+        SendMail sendMail = new SendMail();
         boolean goodData = false;
         Scanner sc = new Scanner(System.in);
         CurrencyEnum retCur = CurrencyEnum.UAH;
@@ -45,23 +63,26 @@ public class DataInput {
                 goodData = true;
             }catch (IllegalArgumentException ex){
                 System.out.println("Введена неправильна команда");
+                logger.warning("Помилка вводу");
+                try {
+                    sendMail.sendMailOutLook();
+                } catch (FileNotFoundException e) {
+                    throw new RuntimeException(e);
+                }
             }
         }
         return retCur;
     }
 
     private double inputDouble(Predicate<Double> pared){
-        Scanner sc = new Scanner(System.in);
         return input(sc::nextDouble, pared);
     }
-
     private int inputInt(Predicate<Integer> pared){
-        Scanner sc = new Scanner(System.in);
         return input(sc::nextInt, pared);
     }
 
     private <T> T input(Supplier<T> supplier, Predicate<T> predicate){
-        Scanner sc = new Scanner(System.in);
+        SendMail sendMail = new SendMail();
         boolean goodData = false;
         T value = null;
         while(!goodData){
@@ -74,9 +95,21 @@ public class DataInput {
             } catch (InputMismatchException ex){
                 System.out.println("Введена неправильна команда");
                 sc.next();
+                logger.warning("Помилка вводу");
+                try {
+                    sendMail.sendMailOutLook();
+                } catch (FileNotFoundException e) {
+                    throw new RuntimeException(e);
+                }
             }
             catch (IllegalArgumentException ex){
                 System.out.println("Введена неправильна команда");
+                logger.warning("Помилка вводу");
+                try {
+                    sendMail.sendMailOutLook();
+                } catch (FileNotFoundException e) {
+                    throw new RuntimeException(e);
+                }
             }
         }
         return value;

@@ -3,7 +3,11 @@ package com.yarets.bankdeposit.mainmenu;
 import com.yarets.bankdeposit.DataInput;
 import com.yarets.bankdeposit.deposit.DefaultDeposit;
 
+import java.io.IOException;
 import java.util.*;
+import java.util.logging.FileHandler;
+import java.util.logging.Logger;
+import java.util.logging.SimpleFormatter;
 
 public class SearchOption implements MainMenuCommand {
     @Override
@@ -13,6 +17,8 @@ public class SearchOption implements MainMenuCommand {
         System.out.println("Виберіть за яким параметром буде відбуватись пошук: ");
         int searchPattern = choosePattern(searchPatternList);
         List<DefaultDeposit> resSearchDeposit = searchDeposit(searchPattern, listDeposit);
+        Logger logger = Logger.getLogger("MyLog");
+        logger.info("Пошук в масиві");
     }
     protected List<DefaultDeposit> searchDeposit(Integer searchPattern, List<DefaultDeposit> searchList){
         List<DefaultDeposit> resDeposit = new ArrayList<>();

@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="aspose-email-22.10-javadoc">
+    <CLASSES>
+      <root url="jar://$APPLICATION_HOME_DIR$/lib/aspose-email-22.10-jdk16.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$APPLICATION_HOME_DIR$/lib/aspose-email-22.10-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES />
+  </library>
+</component>

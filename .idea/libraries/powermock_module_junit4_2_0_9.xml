@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="powermock-module-junit4-2.0.9">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../powermock-module-junit4-2.0.9.jar!/" />
+      <root url="jar://$APPLICATION_HOME_DIR$/lib/powermock-module-junit4-2.0.9.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

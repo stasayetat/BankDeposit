@@ -7,7 +7,11 @@ import com.yarets.bankdeposit.comparator.DepositNameComparator;
 import com.yarets.bankdeposit.comparator.PercentageComparator;
 import com.yarets.bankdeposit.deposit.DefaultDeposit;
 
+import java.io.IOException;
 import java.util.*;
+import java.util.logging.FileHandler;
+import java.util.logging.Logger;
+import java.util.logging.SimpleFormatter;
 
 public class SortOption extends SearchOption implements MainMenuCommand {
 
@@ -21,6 +25,8 @@ public class SortOption extends SearchOption implements MainMenuCommand {
         System.out.println("Виберіть за яким параметром буде відбуватись сортування:");
         sortPattern = choosePattern(sortList);
         sortDeposit(sortPattern, listDeposit);
+        Logger logger = Logger.getLogger("MyLog");
+        logger.info("Сортуємо масив");
     }
     private void sortDeposit(Integer sortPattern, List<DefaultDeposit> listDeposit){
         DataInput dpi = new DataInput();

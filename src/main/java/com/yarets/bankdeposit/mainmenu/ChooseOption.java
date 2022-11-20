@@ -5,14 +5,20 @@ import com.yarets.bankdeposit.CurrencyEnum;
 import com.yarets.bankdeposit.DataInput;
 import com.yarets.bankdeposit.deposit.DefaultDeposit;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.FileHandler;
+import java.util.logging.Logger;
+import java.util.logging.SimpleFormatter;
 
 public class ChooseOption implements MainMenuCommand {
     protected List<DefaultDeposit> patternDeposit = new ArrayList<>();
     protected DataInput dpi = new DataInput();
+    private Logger logger = Logger.getLogger("MyLog");
     public ChooseOption() {
         createSomeDeposit(patternDeposit);
+        logger.info("Створено базові депозити");
     }
 
     @Override
@@ -28,6 +34,7 @@ public class ChooseOption implements MainMenuCommand {
         setDeposit(curDeposit);
         listDeposit.add(curDeposit);
         curDeposit.calcInvest();
+        logger.info("Депозит додано");
     }
 
     protected void setDeposit(DefaultDeposit curDeposit){
@@ -42,6 +49,7 @@ public class ChooseOption implements MainMenuCommand {
         curDeposit.setMonthlyCapitalization(chooseCap());
         curDeposit.setAmountMonthlyAdd(chooseMonthlyAdd());
         curDeposit.setCurrency(chooseCurrency());
+        logger.info("Депозит налаштовано");
     }
 
     protected int chooseMoneyDeposit(DefaultDeposit defaultDeposit){

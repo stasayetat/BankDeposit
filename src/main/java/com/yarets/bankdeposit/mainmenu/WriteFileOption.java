@@ -4,23 +4,12 @@ import com.yarets.bankdeposit.deposit.DefaultDeposit;
 
 import java.io.*;
 import java.util.List;
+import java.util.logging.FileHandler;
+import java.util.logging.Logger;
+import java.util.logging.SimpleFormatter;
 
 public class WriteFileOption implements MainMenuCommand {
-//    @Override
-//    public void doCommand(List<DefaultDeposit> listDeposit) {
-//        try {
-//            PrintStream out = new PrintStream(new FileOutputStream("C:\\Users\\stasy\\IdeaProjects\\BankDeposit\\data.txt"));
-//            System.setOut(out);
-//            PrintOption printOption = new PrintOption();
-//            printOption.doCommand(listDeposit);
-//            System.setOut(System.out);
-//            out.flush();
-//            System.out.println("Запис успішно проведено!");
-//        } catch (FileNotFoundException e) {
-//            throw new RuntimeException(e);
-//        }
-//
-//    }
+
     @Override
     public void doCommand(List<DefaultDeposit> listDeposit) {
             String consoleOutPut = null;
@@ -41,5 +30,7 @@ public class WriteFileOption implements MainMenuCommand {
             throw new RuntimeException(e);
         }
         System.out.println("Запис успішно проведено!");
+        Logger logger = Logger.getLogger("MyLog");
+        logger.info("Пишемо в файл");
     }
 }
